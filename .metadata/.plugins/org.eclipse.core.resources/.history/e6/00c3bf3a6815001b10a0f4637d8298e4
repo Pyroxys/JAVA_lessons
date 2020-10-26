@@ -1,0 +1,15 @@
+package Version3;
+
+import java.util.Vector;
+
+public abstract class Statement {
+	
+	public abstract String statement(Client client);
+	
+	public String situation(boolean natureStatement) {
+		Object statement = natureStatement ? new TextStatement() : new HtmlStatement();
+			TextStatement textStatement = new TextStatement();
+			return textStatement.statement(this);
+		}
+
+}

@@ -1,0 +1,17 @@
+package Version3;
+
+public class PrixNouveaute extends Prix {
+
+	public double getMontant(Location location) {
+		return location.getNbJours() * 3;
+	}
+	
+	public int getPointsFidelite(Location location) {
+		int pointsFidelite = 0;
+		
+		if (location.getNbJours() > 1) {
+			pointsFidelite++;	
+		}
+		return pointsFidelite;	
+	}
+}

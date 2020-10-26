@@ -1,0 +1,197 @@
+ERROR 15:08:01,552 [saros-connect-xmpp] (?:?)  new connection state == ERROR
+chinwag.im:5222 Exception: XMPPError connecting to chinwag.im:5222.; : remote-server-error(502)
+  -- caused by: XMPPError connecting to chinwag.im:5222.: remote-server-error(502) XMPPError connecting to chinwag.im:5222.
+  -- caused by: java.net.ConnectException: Connection timed out: connect
+	at org.jivesoftware.smack.XMPPConnection.connectUsingConfiguration(XMPPConnection.java:592)
+	at org.jivesoftware.smack.XMPPConnection.connect(XMPPConnection.java:1010)
+	at saros.net.xmpp.XMPPConnectionService.connect(XMPPConnectionService.java:258)
+	at saros.communication.connection.ConnectionHandler.connectXMPPInternal(ConnectionHandler.java:219)
+	at saros.communication.connection.ConnectionHandler.connect(ConnectionHandler.java:150)
+	at saros.ui.util.XMPPConnectionSupport.lambda$0(XMPPConnectionSupport.java:181)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Nested Exception: 
+XMPPError connecting to chinwag.im:5222.: remote-server-error(502) XMPPError connecting to chinwag.im:5222.
+  -- caused by: java.net.ConnectException: Connection timed out: connect
+	at org.jivesoftware.smack.XMPPConnection.connectUsingConfiguration(XMPPConnection.java:565)
+	at org.jivesoftware.smack.XMPPConnection.connect(XMPPConnection.java:1010)
+	at saros.net.xmpp.XMPPConnectionService.connect(XMPPConnectionService.java:258)
+	at saros.communication.connection.ConnectionHandler.connectXMPPInternal(ConnectionHandler.java:219)
+	at saros.communication.connection.ConnectionHandler.connect(ConnectionHandler.java:150)
+	at saros.ui.util.XMPPConnectionSupport.lambda$0(XMPPConnectionSupport.java:181)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Nested Exception: 
+java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:503)
+	at java.base/sun.nio.ch.Net.connect(Net.java:492)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/java.net.Socket.connect(Socket.java:597)
+	at org.jivesoftware.smack.proxy.DirectSocketFactory.createSocket(DirectSocketFactory.java:45)
+	at org.jivesoftware.smack.XMPPConnection.connectUsingConfiguration(XMPPConnection.java:557)
+	at org.jivesoftware.smack.XMPPConnection.connect(XMPPConnection.java:1010)
+	at saros.net.xmpp.XMPPConnectionService.connect(XMPPConnectionService.java:258)
+	at saros.communication.connection.ConnectionHandler.connectXMPPInternal(ConnectionHandler.java:219)
+	at saros.communication.connection.ConnectionHandler.connect(ConnectionHandler.java:150)
+	at saros.ui.util.XMPPConnectionSupport.lambda$0(XMPPConnectionSupport.java:181)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+WARN  15:10:50,969 [ModalContext] (AddContactUtility.java:87) Problem while adding a contact.CancellationException User decided to add contact anyway. Problem: service-unavailable(-1)
+WARN  15:14:06,435 [ModalContext] (AddContactUtility.java:87) Problem while adding a contact.CancellationException User decided to add contact anyway. Problem: service-unavailable(-1)
+WARN  15:14:15,565 [Worker-15: Session Startup] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+WARN  15:22:53,922 [main] (AddContactWizard.java:79) The XMPP server did not respond.
+saros.exceptions.OperationCanceledException: The XMPP server did not respond.
+	at saros.net.xmpp.contact.AddContactUtility.addToRoster(AddContactUtility.java:85)
+	at saros.net.xmpp.contact.XMPPContactsService.addContact(XMPPContactsService.java:194)
+	at saros.ui.wizards.AddContactWizard.addContact(AddContactWizard.java:119)
+	at saros.ui.wizards.AddContactWizard.lambda$0(AddContactWizard.java:68)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+WARN  15:23:29,369 [ModalContext] (AddContactUtility.java:87) Problem while adding a contact.CancellationException User decided to add contact anyway. Problem: No response from the server.
+WARN  15:23:48,649 [Smack Listener Processor (1)] (SubscriptionHandler.java:128) received error presence package from hugo1410@chinwag.com, condition: remote-server-not-found, message: Server-to-server connection failed: connection-timeout
+WARN  15:23:48,651 [Smack Listener Processor (1)] (SubscriptionHandler.java:128) received error presence package from hugo1410@chinwag.com, condition: remote-server-not-found, message: Server-to-server connection failed: connection-timeout
+WARN  15:23:50,080 [ModalContext] (AddContactUtility.java:87) Problem while adding a contact.CancellationException User decided to add contact anyway. Problem: service-unavailable(-1)
+ERROR 15:35:15,583 [saros-server-network-watchdog] (ServerSessionTimeoutHandler.java:118) no pong received from user hugo1410@chinwag.im/Saros, reached timeout = 300000
+ERROR 15:45:51,173 [Smack Packet Reader (1)] (XMPPConnectionService.java:104) XMPP connection error: 
+javax.net.ssl.SSLException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:325)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:268)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:263)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1667)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1049)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:297)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:339)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:212)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420)
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826)
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1052)
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+		... 18 more
+Caused by: java.net.SocketException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:982)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:469)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:463)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1033)
+	... 14 more
+ERROR 15:45:51,174 [Smack Packet Reader (1)] (XMPPConnectionService.java:386)  new connection state == ERROR
+javax.net.ssl.SSLException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:325)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:268)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:263)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1667)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1049)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:297)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:339)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:212)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420)
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826)
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1052)
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+		... 18 more
+Caused by: java.net.SocketException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:982)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:469)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:463)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1033)
+	... 14 more
+ERROR 15:45:56,675 [saros-activity-sender] (ActivitySequencer.java:528) failed to sent activities: [ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/Prix.java], hash: 1487376786, length: 42, jupiterTimestamp: [21,4]), ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/PrixEnfant.java], hash: 688236684, length: 61, jupiterTimestamp: [7,2]), ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/Film.java], hash: 1455312837, length: 1231, jupiterTimestamp: [11,4])]
+java.io.IOException: not connected to a XMPP server
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:91)
+	at saros.session.internal.ActivitySequencer.sendActivities(ActivitySequencer.java:526)
+	at saros.session.internal.ActivitySequencer.access$3(ActivitySequencer.java:461)
+	at saros.session.internal.ActivitySequencer$2.run(ActivitySequencer.java:147)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+ERROR 15:45:56,676 [saros-activity-sender] (ActivitySequencer.java:528) failed to sent activities: [ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/Prix.java], hash: 1487376786, length: 42, jupiterTimestamp: [14,14]), ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/PrixEnfant.java], hash: 688236684, length: 61, jupiterTimestamp: [8,1]), ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/Film.java], hash: 1455312837, length: 1231, jupiterTimestamp: [46,18])]
+java.io.IOException: not connected to a XMPP server
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:91)
+	at saros.session.internal.ActivitySequencer.sendActivities(ActivitySequencer.java:526)
+	at saros.session.internal.ActivitySequencer.access$3(ActivitySequencer.java:461)
+	at saros.session.internal.ActivitySequencer$2.run(ActivitySequencer.java:147)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+ERROR 15:45:56,676 [saros-kill-user-hugo1410-tx] (UserInformationHandler.java:153) failed to send user list to user: stranderz@chinwag.im/Saros
+java.io.IOException: not connected to a XMPP server
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:91)
+	at saros.session.internal.UserInformationHandler.synchronizeUserList(UserInformationHandler.java:148)
+	at saros.session.internal.SarosSession.removeUser(SarosSession.java:442)
+	at saros.session.internal.timeout.SessionTimeoutHandler$2.run(SessionTimeoutHandler.java:105)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+ERROR 15:45:56,677 [saros-activity-sender] (ActivitySequencer.java:528) failed to sent activities: [ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/Prix.java], hash: 1487376786, length: 42, jupiterTimestamp: [23,5]), ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/PrixEnfant.java], hash: 688236684, length: 61, jupiterTimestamp: [7,2]), ChecksumActivity(path: SPath [project=P/Refactoring3 (EclipseProjectImpl), projectRelativePath=src/Version3/Film.java], hash: 1455312837, length: 1231, jupiterTimestamp: [45,19])]
+java.io.IOException: not connected to a XMPP server
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:91)
+	at saros.session.internal.ActivitySequencer.sendActivities(ActivitySequencer.java:526)
+	at saros.session.internal.ActivitySequencer.access$3(ActivitySequencer.java:461)
+	at saros.session.internal.ActivitySequencer$2.run(ActivitySequencer.java:147)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+ERROR 15:45:56,677 [saros-kill-user-hugo1410-tx] (UserInformationHandler.java:153) failed to send user list to user: bolosse@chinwag.im/Saros
+java.io.IOException: not connected to a XMPP server
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:91)
+	at saros.session.internal.UserInformationHandler.synchronizeUserList(UserInformationHandler.java:148)
+	at saros.session.internal.SarosSession.removeUser(SarosSession.java:442)
+	at saros.session.internal.timeout.SessionTimeoutHandler$2.run(SessionTimeoutHandler.java:105)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+WARN  15:45:56,678 [saros-kill-user-hugo1410-tx] (UserInformationHandler.java:195) failed to synchronize user list with user(s) [stranderz@chinwag.im/Saros, bolosse@chinwag.im/Saros]
+ERROR 15:45:56,678 [saros-kill-user-hugo1410-tx] (SarosSession.java:446) could not synchronize user list properly, following users did not respond: stranderz@chinwag.im/Saros, bolosse@chinwag.im/Saros
+ERROR 15:45:56,678 [saros-kill-user-stranderz-tx] (UserInformationHandler.java:153) failed to send user list to user: bolosse@chinwag.im/Saros
+java.io.IOException: not connected to a XMPP server
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:91)
+	at saros.session.internal.UserInformationHandler.synchronizeUserList(UserInformationHandler.java:148)
+	at saros.session.internal.SarosSession.removeUser(SarosSession.java:442)
+	at saros.session.internal.timeout.SessionTimeoutHandler$2.run(SessionTimeoutHandler.java:105)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+WARN  15:45:56,679 [saros-kill-user-stranderz-tx] (UserInformationHandler.java:195) failed to synchronize user list with user(s) [bolosse@chinwag.im/Saros]
+ERROR 15:45:56,679 [saros-kill-user-stranderz-tx] (SarosSession.java:446) could not synchronize user list properly, following users did not respond: bolosse@chinwag.im/Saros
+WARN  15:45:56,691 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to stranderz@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: pyroxys@chinwag.im/Saros, colorID: 0)
+WARN  15:45:56,692 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to hugo1410@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: pyroxys@chinwag.im/Saros, colorID: 0)
+WARN  15:45:56,692 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to stranderz@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: stranderz@chinwag.im/Saros, colorID: 1)
+WARN  15:45:56,693 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to hugo1410@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: stranderz@chinwag.im/Saros, colorID: 1)
+WARN  15:45:56,693 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to stranderz@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: hugo1410@chinwag.im/Saros, colorID: 2)
+WARN  15:45:56,693 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to hugo1410@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: hugo1410@chinwag.im/Saros, colorID: 2)
+WARN  15:45:56,739 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to stranderz@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: pyroxys@chinwag.im/Saros, colorID: 0)
+WARN  15:45:56,739 [saros-DispatchContext] (ActivitySequencer.java:374) cannot send activity to stranderz@chinwag.im/Saros because it is currently not registers, dropped activity: ChangeColorActivity(source: pyroxys@chinwag.im/Saros, affected: stranderz@chinwag.im/Saros, colorID: 1)

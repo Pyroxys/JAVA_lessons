@@ -1,0 +1,19 @@
+INFO  20:58:54,104 [Worker-1: Session Startup] (ConsistencyAction.java:172) Starting Saros 16.0.1 running:
+  Java Version: 14.0.2
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.19.0.v20200724-1004
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  20:58:54,145 [Worker-1: Session Startup] (ConsistencyAction.java:172) initializing context...
+INFO  20:58:54,745 [Worker-1: Session Startup] (ConsistencyAction.java:172) initializing preference default values
+INFO  20:58:54,840 [Worker-1: Session Startup] (ConsistencyAction.java:172) successfully initialized context
+WARN  21:05:19,676 [Worker-1: Session Startup] (ConsistencyAction.java:172) watchdog client component is not available, cannot perform inconsistency notification
+INFO  21:05:20,262 [Worker-1: Session Startup] (SarosSessionManager.java:272) session started
+DEBUG 21:05:23,204 [Smack Listener Processor (0)] (MultiUserChatStateManager.java:98) Incoming Message from saros_70111929@rooms.chinwag.im/pyroxys@chinwag.im/Saros with state: active
+INFO  21:05:44,213 [Worker-5: Inviting stranderz@chinwag.im (stranderz@chinwag.im)...] (SarosSession.java:354) user stranderz@chinwag.im/Saros joined session
+INFO  21:05:54,349 [saros-DispatchContext] (NegotiationPacketListener.java:227) received invitation from hugo1410@chinwag.im/Saros [negotiation id: 8914343580548496962, session id: 852919789, version: 16.0.1]
+INFO  21:05:54,350 [saros-DispatchContext] (NegotiationPacketListener.java:241) rejecting session negotiation request with id: 8914343580548496962
+INFO  21:06:08,453 [saros-shutdown] (SarosSessionManager.java:332) session stopped
+INFO  21:06:08,609 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  21:06:08,609 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  21:06:08,955 [Framework stop - Equinox Container: b7858ce1-28e3-4b72-92db-a7ec6ac52b62] (Saros.java:137) Stopping Saros 16.0.1

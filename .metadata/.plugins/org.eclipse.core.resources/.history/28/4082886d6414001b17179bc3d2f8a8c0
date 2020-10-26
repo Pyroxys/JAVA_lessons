@@ -1,0 +1,12 @@
+package Version1;
+
+import java.util.Vector;
+
+public class getMontantTotal {
+	public String nom;
+	public Vector locations;
+
+	public getMontantTotal(Vector locations) {
+		this.locations = locations;
+	}
+}

@@ -1,0 +1,26 @@
+package Version3;
+
+public class HtmlStatement extends Statement {
+
+	  @Override
+	    String situation(Client client) {
+	        Iterator forEach = client.getLocations().iterator();
+	        String result = "Situation du client: " + client.getNom() + "<br>";
+
+	        while (forEach.hasNext()) {
+	            Location each = (Location) forEach.next();
+
+
+	            // mise en forme location
+	            result += "<p>" + each.getFilm().getTitre() + "</p>" + String.valueOf(each.unFilm.getCodePrix().getMontant(each)) + "<br>";
+	        }
+
+	        // ajout récapitulatif client
+	        result += "Total du " + String.valueOf(client.getMontantTotal()) + "<br>";
+	        result += "Vous gagnez " + String.valueOf(client.getPointsFideliteTotal()) + " points de fidelite<br>";
+
+	        return result;
+	    }
+
+	}
+}

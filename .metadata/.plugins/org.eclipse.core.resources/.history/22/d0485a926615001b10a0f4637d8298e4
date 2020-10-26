@@ -1,0 +1,53 @@
+package Version3;
+
+import java.util.Vector;
+import java.util.Iterator;
+
+public class Client {
+	private String nom;
+	private Vector locations = new Vector();
+
+	public Client(String nom) {
+		this.nom = nom;
+	}
+
+	public void addLocation(Location location) {
+		this.locations.add(location);
+	}
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public String situation(boolean natureStatement) {
+		if (natureStatement) {
+			
+		}
+	TextStatement textStatement = new TextStatement();
+	return textStatement.statement(this);
+	}
+	protected int getPointsFidelitesTotal() {
+		Iterator forEach = locations.iterator();
+		int pointsFidelites = 0;
+		while (forEach.hasNext()) {
+			Location each = (Location) forEach.next();
+			pointsFidelites += each.unFilm.getCodePrix().getPointsFidelites(each);
+		}
+		return pointsFidelites;
+	}
+
+	protected double getMontantTotal() {
+		Iterator forEach = locations.iterator();
+		double totalDu = 0;
+		while (forEach.hasNext()) {
+			Location each = (Location) forEach.next();
+			totalDu += each.unFilm.getCodePrix().getMontant(each);
+		}
+		return totalDu;
+	}
+	
+	public Vector getLocations() {
+		return locations;
+	}
+
+}

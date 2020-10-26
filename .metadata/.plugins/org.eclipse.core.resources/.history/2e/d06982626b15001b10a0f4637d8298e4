@@ -1,0 +1,21 @@
+package Version3;
+
+public class PrixCinephile extends Prix {
+	
+	@Override
+	double getMontant(Location location) {
+		double du += 2;
+		pointsFidelites += 2;
+	if(each.getNbJours() > 1) {
+		du = each.getNbJours() + 4;
+		pointsFidelites -= 3;
+	}
+		return du;
+	}
+
+	@Override
+	int getPointsFidelites(Location location) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

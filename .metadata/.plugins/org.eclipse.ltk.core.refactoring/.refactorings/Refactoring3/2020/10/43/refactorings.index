@@ -1,0 +1,10 @@
+1603369553139	Extract method 'getMontant'
+1603369849865	Move method 'getMontant'
+1603370218013	Extract method 'getPointsFidelite'
+1603370295772	Move method 'getPointsFidelite'
+1603371215131	Extract method 'getMontantTotal'
+1603371463402	Extract method 'getPointsFidelitesTotal'
+1603372328875	Move method 'getMontant'
+1603372335889	Move method 'getPointsFidelite'
+1603373926833	Copy package
+1603373930520	Delete element

@@ -1,0 +1,40 @@
+package jeurole;
+
+import livre.EntiteLivre;
+
+public abstract class EtreVivant extends EntiteLivre {
+	protected int qteVie;
+	protected String nom;
+	protected Bataille bataille;
+
+	public EtreVivant(int qteVie, String nom) {
+		this.qteVie = qteVie;
+		this.nom = nom;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	protected void subirAttaque(int force) {
+		_livre.ecrire(this.nom + " a subit une violente attaque");
+		qteVie = qteVie - force;
+		if(qteVie <= 0) {
+			mourir();
+		}else {
+			_livre.ecrire(" mais il parvient à se relever.\n");
+		}
+	}
+	
+	public abstract void mourir();
+	
+	public void rejointBataille(Bataille bataille) {
+		this.bataille = bataille;
+	}
+
+
+
+
+
+
+}

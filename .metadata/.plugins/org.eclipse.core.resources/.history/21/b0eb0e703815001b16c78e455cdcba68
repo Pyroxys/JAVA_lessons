@@ -1,0 +1,9 @@
+package Version3;
+
+public abstract class Prix {
+	
+	abstract void getMontant(Location location);
+	
+	abstract void getPointsFidelite();
+
+}

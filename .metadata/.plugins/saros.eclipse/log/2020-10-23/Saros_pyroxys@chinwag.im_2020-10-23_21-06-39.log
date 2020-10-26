@@ -1,0 +1,146 @@
+INFO  21:06:14,185 [saros-DispatchContext] (NegotiationPacketListener.java:227) Starting Saros 16.0.1 running:
+  Java Version: 14.0.2
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.19.0.v20200724-1004
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  21:06:14,216 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing context...
+INFO  21:06:14,658 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing preference default values
+INFO  21:06:14,717 [saros-DispatchContext] (NegotiationPacketListener.java:227) successfully initialized context
+INFO  21:06:39,517 [saros-DispatchContext] (NegotiationPacketListener.java:227) received invitation from hugo1410@chinwag.im/Saros [negotiation id: -123370400540117327, session id: 852919789, version: 16.0.1]
+INFO  21:06:44,439 [ModalContext] (SarosSessionManager.java:288) joined uninitialized Saros session
+INFO  21:06:44,440 [ModalContext] (DataTransferManager.java:269) establishing connection to hugo1410@chinwag.im/Saros from pyroxys@chinwag.im/Saros using stream service XMPP-Socks5-Stream-Service
+WARN  21:07:06,149 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_852919789@rooms.chinwag.im/pyroxys@chinwag.im/Saros, condition: not-authorized, message: null
+WARN  21:07:06,447 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_852919789@rooms.chinwag.im/pyroxys@chinwag.im/Saros, condition: item-not-found, message: null
+ERROR 21:07:06,448 [saros-muc-join] (MultiUserChatService.java:107) Couldn't join chat: SAROS_852919789@rooms.chinwag.im
+not-authorized(401)
+	at org.jivesoftware.smackx.muc.MultiUserChat.create(MultiUserChat.java:370)
+	at saros.communication.chat.muc.MultiUserChat.createAndJoinMUC(MultiUserChat.java:232)
+	at saros.communication.chat.muc.MultiUserChat.connect(MultiUserChat.java:153)
+	at saros.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:104)
+	at saros.ui.widgets.chat.ChatRoomsComposite.createChat(ChatRoomsComposite.java:636)
+	at saros.ui.widgets.chat.ChatRoomsComposite.access$3(ChatRoomsComposite.java:630)
+	at saros.ui.widgets.chat.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:220)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO  21:07:07,523 [saros-DispatchContext] (NegotiationPacketListener.java:310) received project negotiation from hugo1410@chinwag.im/Saros with negotiation id: 5712605994455868050
+INFO  21:07:15,617 [saros-DispatchContext] (SarosSession.java:354) user stranderz@chinwag.im/Saros joined session
+INFO  21:07:46,133 [saros-DispatchContext] (SarosSession.java:389) user hugo1410@chinwag.im/Saros now has Projects and can process IResourceActivities
+INFO  21:07:48,252 [saros-DispatchContext] (SarosSession.java:389) user hugo1410@chinwag.im/Saros now has Projects and can process IResourceActivities
+INFO  21:16:03,861 [saros-DispatchContext] (SarosSession.java:354) user bolosse@chinwag.im/Saros joined session
+INFO  21:16:52,168 [saros-DispatchContext] (SarosSession.java:389) user hugo1410@chinwag.im/Saros now has Projects and can process IResourceActivities
+ERROR 22:26:06,084 [saros-activity-sender] (ActivitySequencer.java:528) failed to sent activities: [JupiterActivity(timestamp: [78,343], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros), JupiterActivity(timestamp: [86,256], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros), JupiterActivity(timestamp: [133,327], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros), JupiterActivity(timestamp: [69,155], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros), JupiterActivity(timestamp: [78,340], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros), JupiterActivity(timestamp: [22,126], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros), JupiterActivity(timestamp: [111,753], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros), JupiterActivity(timestamp: [13,39], operation: Noop(0,''), source: pyroxys@chinwag.im/Saros)]
+java.io.IOException: not connected to hugo1410@chinwag.im/Saros [connection identifier=saros-main-session]
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:96)
+	at saros.session.internal.ActivitySequencer.sendActivities(ActivitySequencer.java:526)
+	at saros.session.internal.ActivitySequencer.access$3(ActivitySequencer.java:461)
+	at saros.session.internal.ActivitySequencer$2.run(ActivitySequencer.java:147)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO  22:26:06,097 [saros-kill-session-tx] (SarosSessionManager.java:332) session stopped
+INFO  23:02:05,346 [saros-DispatchContext] (NegotiationPacketListener.java:227) received invitation from hugo1410@chinwag.im/Saros [negotiation id: -4894173600794785575, session id: 1123952464, version: 16.0.1]
+INFO  23:02:10,056 [ModalContext] (SarosSessionManager.java:288) joined uninitialized Saros session
+INFO  23:02:10,057 [ModalContext] (DataTransferManager.java:269) establishing connection to hugo1410@chinwag.im/Saros from pyroxys@chinwag.im/Saros using stream service XMPP-Socks5-Stream-Service
+WARN  23:02:30,302 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_1123952464@rooms.chinwag.im/pyroxys@chinwag.im/Saros, condition: not-authorized, message: null
+WARN  23:02:30,600 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_1123952464@rooms.chinwag.im/pyroxys@chinwag.im/Saros, condition: item-not-found, message: null
+ERROR 23:02:30,600 [saros-muc-join] (MultiUserChatService.java:107) Couldn't join chat: SAROS_1123952464@rooms.chinwag.im
+not-authorized(401)
+	at org.jivesoftware.smackx.muc.MultiUserChat.create(MultiUserChat.java:370)
+	at saros.communication.chat.muc.MultiUserChat.createAndJoinMUC(MultiUserChat.java:232)
+	at saros.communication.chat.muc.MultiUserChat.connect(MultiUserChat.java:153)
+	at saros.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:104)
+	at saros.ui.widgets.chat.ChatRoomsComposite.createChat(ChatRoomsComposite.java:636)
+	at saros.ui.widgets.chat.ChatRoomsComposite.access$3(ChatRoomsComposite.java:630)
+	at saros.ui.widgets.chat.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:220)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO  23:02:31,623 [saros-DispatchContext] (NegotiationPacketListener.java:310) received project negotiation from hugo1410@chinwag.im/Saros with negotiation id: 3258097048319392304
+INFO  23:02:42,409 [saros-DispatchContext] (SarosSession.java:389) user hugo1410@chinwag.im/Saros now has Projects and can process IResourceActivities
+INFO  23:03:17,970 [saros-DispatchContext] (SarosSession.java:354) user bolosse@chinwag.im/Saros joined session
+INFO  23:06:20,030 [saros-DispatchContext] (SarosSession.java:389) user hugo1410@chinwag.im/Saros now has Projects and can process IResourceActivities
+INFO  23:55:37,899 [saros-stop-host] (SarosSessionManager.java:332) session stopped
+ERROR 10:50:58,883 [Smack Packet Reader (0)] (XMPPConnectionService.java:104) XMPP connection error: 
+javax.net.ssl.SSLException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:325)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:268)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:263)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1667)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1049)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:297)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:339)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:212)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420)
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826)
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1052)
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+		... 18 more
+Caused by: java.net.SocketException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:982)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:469)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:463)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1033)
+	... 14 more
+ERROR 10:50:58,907 [Smack Packet Reader (0)] (XMPPConnectionService.java:386)  new connection state == ERROR
+javax.net.ssl.SSLException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:325)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:268)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:263)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1667)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1049)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:297)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:339)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:212)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:312)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:48)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:76)
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420)
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826)
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1052)
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:356)
+		... 18 more
+Caused by: java.net.SocketException: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:982)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:469)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:463)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1033)
+	... 14 more
+INFO  13:30:08,134 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  13:30:08,142 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  13:30:08,365 [Framework stop - Equinox Container: 4b5d29d8-46d6-4a1a-b2f2-e7ad626235f5] (Saros.java:137) Stopping Saros 16.0.1

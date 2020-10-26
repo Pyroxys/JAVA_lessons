@@ -1,0 +1,28 @@
+package Version3;
+
+import java.util.Iterator;
+
+public class TextStatement extends Statement {
+
+	@Override
+	public String situation(Client client) {
+		String result;
+
+		Iterator forEach = client.getLocations().iterator();
+		result = "Situation du client: " + client.getNom() + "\n";
+		
+		// ajout des points de fidelite et le montant total
+		while (forEach.hasNext()) {
+			Location each = (Location) forEach.next();
+			result += "\t" + each.getFilm().getTitre() + "\t" + String.valueOf(each.unFilm.getCodePrix().getMontant(each)) + "\n";
+
+		}
+		result += "Total du " + String.valueOf(client.getMontantTotal()) + "\n";
+		result += "Vous gagnez " + String.valueOf(client.getPointsFidelitesTotal()) + " points de fidelite\n";
+
+		
+		return result;
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package Version3;
+
+public class HtmlStatement extends Statement {
+	
+	@Override
+	String situation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

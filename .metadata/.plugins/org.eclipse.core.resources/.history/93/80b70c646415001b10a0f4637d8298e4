@@ -1,0 +1,11 @@
+package Version3;
+
+public class TextStatement extends Statement {
+
+	@Override
+	String statement() {
+		return null;
+		
+	}
+
+}

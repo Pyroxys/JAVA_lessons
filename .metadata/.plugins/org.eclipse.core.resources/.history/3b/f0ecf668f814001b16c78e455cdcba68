@@ -1,0 +1,21 @@
+package jeurole;
+
+public class Dragon extends EtreVivant {
+
+	public Dragon(String nom) {
+		super(200, nom);
+	}
+	
+	@Override
+	public void mourir() {
+		livre.ecrire("c'est ainsi que le courageux " + this.nom + " mourut.\n");
+		this.bataille.eliminer(this);
+	}
+
+	@Override
+	public void rejointBataille(Bataille bataille) {
+		super.rejointBataille(bataille);
+		this.bataille.ajouter(this);
+	}
+}
+

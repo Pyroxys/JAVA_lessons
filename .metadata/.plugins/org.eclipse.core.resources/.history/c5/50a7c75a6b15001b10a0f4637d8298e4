@@ -1,0 +1,16 @@
+package Version3;
+
+public class PrixCinephile extends Prix {
+	
+	@Override
+	double getMontant(Location location) {
+		
+		return 0;
+	}
+
+	@Override
+	int getPointsFidelites(Location location) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

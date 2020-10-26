@@ -1,0 +1,55 @@
+INFO  21:21:46,086 [saros-DispatchContext] (NegotiationPacketListener.java:227) Starting Saros 16.0.1 running:
+  Java Version: 14.0.2
+  Java Vendor: Oracle Corporation
+  Eclipse Runtime Version: 3.19.0.v20200724-1004
+  Operating System: Windows 10 (10.0)
+  Hardware Architecture: amd64
+INFO  21:21:46,144 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing context...
+INFO  21:21:46,787 [saros-DispatchContext] (NegotiationPacketListener.java:227) initializing preference default values
+INFO  21:21:46,865 [saros-DispatchContext] (NegotiationPacketListener.java:227) successfully initialized context
+INFO  21:22:14,994 [saros-DispatchContext] (NegotiationPacketListener.java:227) received invitation from hugo1410@chinwag.im/Saros [negotiation id: -8960627727618575458, session id: 1078666697, version: 16.0.1]
+INFO  21:22:23,749 [ModalContext] (SarosSessionManager.java:288) joined uninitialized Saros session
+INFO  21:22:23,750 [ModalContext] (DataTransferManager.java:269) establishing connection to hugo1410@chinwag.im/Saros from pyroxys@chinwag.im/Saros using stream service XMPP-Socks5-Stream-Service
+WARN  21:22:38,439 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_1078666697@rooms.chinwag.im/pyroxys@chinwag.im/Saros, condition: not-authorized, message: null
+WARN  21:22:38,735 [Smack Listener Processor (0)] (SubscriptionHandler.java:128) received error presence package from saros_1078666697@rooms.chinwag.im/pyroxys@chinwag.im/Saros, condition: item-not-found, message: null
+ERROR 21:22:38,736 [saros-muc-join] (MultiUserChatService.java:107) Couldn't join chat: SAROS_1078666697@rooms.chinwag.im
+not-authorized(401)
+	at org.jivesoftware.smackx.muc.MultiUserChat.create(MultiUserChat.java:370)
+	at saros.communication.chat.muc.MultiUserChat.createAndJoinMUC(MultiUserChat.java:232)
+	at saros.communication.chat.muc.MultiUserChat.connect(MultiUserChat.java:153)
+	at saros.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:104)
+	at saros.ui.widgets.chat.ChatRoomsComposite.createChat(ChatRoomsComposite.java:636)
+	at saros.ui.widgets.chat.ChatRoomsComposite.access$3(ChatRoomsComposite.java:630)
+	at saros.ui.widgets.chat.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:220)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO  21:22:38,790 [saros-DispatchContext] (SarosSession.java:354) user stranderz@chinwag.im/Saros joined session
+INFO  21:22:41,269 [saros-DispatchContext] (NegotiationPacketListener.java:310) received project negotiation from hugo1410@chinwag.im/Saros with negotiation id: 2697642281766375444
+INFO  21:23:10,926 [saros-DispatchContext] (SarosSession.java:389) user hugo1410@chinwag.im/Saros now has Projects and can process IResourceActivities
+INFO  21:49:53,675 [saros-DispatchContext] (NegotiationPacketListener.java:310) received project negotiation from hugo1410@chinwag.im/Saros with negotiation id: 876501182641047128
+INFO  21:50:26,524 [saros-DispatchContext] (SarosSession.java:389) user hugo1410@chinwag.im/Saros now has Projects and can process IResourceActivities
+WARN  21:54:15,067 [saros-DispatchContext] (SarosSession.java:592) failed to notify user hugo1410@chinwag.im/Saros about local session stop
+java.io.IOException: not connected to hugo1410@chinwag.im/Saros [connection identifier=saros-main-session]
+	at saros.net.internal.XMPPTransmitter.send(XMPPTransmitter.java:96)
+	at saros.session.internal.SarosSession.notifyParticipants(SarosSession.java:587)
+	at saros.session.internal.SarosSession.stop(SarosSession.java:563)
+	at saros.session.SarosSessionManager.stopSession(SarosSessionManager.java:331)
+	at saros.negotiation.AbstractIncomingProjectNegotiation.executeCancellation(AbstractIncomingProjectNegotiation.java:299)
+	at saros.negotiation.Negotiation.terminate(Negotiation.java:395)
+	at saros.negotiation.AbstractIncomingProjectNegotiation.remoteCancel(AbstractIncomingProjectNegotiation.java:306)
+	at saros.session.NegotiationPacketListener.projectNegotiationCanceled(NegotiationPacketListener.java:295)
+	at saros.session.NegotiationPacketListener.access$6(NegotiationPacketListener.java:281)
+	at saros.session.NegotiationPacketListener$4.processPacket(NegotiationPacketListener.java:121)
+	at saros.net.internal.XMPPReceiver.forwardPacket(XMPPReceiver.java:192)
+	at saros.net.internal.XMPPReceiver.access$1(XMPPReceiver.java:181)
+	at saros.net.internal.XMPPReceiver$4.run(XMPPReceiver.java:140)
+	at saros.util.ThreadUtils$1.run(ThreadUtils.java:34)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO  21:54:15,068 [saros-DispatchContext] (SarosSessionManager.java:332) session stopped
+INFO  22:09:08,052 [saros-shutdown] (ContainerContext.java:205) disposing context...
+INFO  22:09:08,053 [saros-shutdown] (ContainerContext.java:209) successfully disposed context
+INFO  22:09:08,312 [Framework stop - Equinox Container: 220a47e4-7b3b-446f-ac5f-6143202708aa] (Saros.java:137) Stopping Saros 16.0.1

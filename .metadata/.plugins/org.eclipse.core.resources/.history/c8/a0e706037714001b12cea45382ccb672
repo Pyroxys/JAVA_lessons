@@ -1,0 +1,56 @@
+package Version3;
+
+import java.util.Vector;
+import java.util.Iterator;
+
+public class Client {
+	private String nom;
+	private Vector locations = new Vector();
+
+	public Client(String nom) {
+		this.nom = nom;
+	}
+
+	public void addLocation(Location location) {
+		this.locations.add(location);
+	}
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public String situation() {
+		double totalDu = 0;
+		int pointsFidelite = 0;
+		double montantTotal;
+		Iterator forEach = locations.iterator();
+		String result = "Situation du client: " + getNom() + "\n";
+		// ajout des points de fidelite
+		pointsFidelite = getPointsFidelitesTotal(pointsFidelite, each);
+		montantTotal = getMontantTotal(forEach);
+		// mise en forme location
+		result += "\t" + each.getFilm().getTitre() + "\t" + String.valueOf() + "\n";
+		// ajouter capitulatif client
+		result += "Total du " + String.valueOf(totalDu) + "\n";
+		result += "Vous gagnez " + String.valueOf(pointsFidelite) + " points de fidelite\n";
+
+		return result;
+	}
+
+	protected int getPointsFidelitesTotal(Iterator forEach) {
+		int pointsFidelites = 0;
+		pointsFidelites += each.unFilm.getPointsFidelite(each);
+		return pointsFidelites;
+	}
+
+	protected double getMontantTotal(Iterator forEach) {
+		double totalDu = 0;
+		Location each;
+		while (forEach.hasNext()) {
+			each = (Location) forEach.next();
+			totalDu += each.unFilm.getMontant(each);
+		}
+		return totalDu;
+	}
+
+}

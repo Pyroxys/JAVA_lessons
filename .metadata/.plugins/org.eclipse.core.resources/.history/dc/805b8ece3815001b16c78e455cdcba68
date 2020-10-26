@@ -1,0 +1,16 @@
+package Version3;
+
+public class PrixEnfant extends Prix {
+	
+	public void getMontant(Location location) {
+		int du = 0;
+		if (location.getNbJours() > 3)
+			du += (location.getNbJours() - 3) * 1.5;
+	}
+	
+	public void getPointsFidelite(Location location) {
+		int pointsFidelite = 0;
+		pointsFidelite++;
+	}
+
+}

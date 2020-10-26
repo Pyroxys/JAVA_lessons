@@ -1,0 +1,17 @@
+package Version3;
+
+public class PrixCoffretSeriesTV extends Prix {
+
+	@Override
+	double getMontant(Location location) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	int getPointsFidelites(Location location) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

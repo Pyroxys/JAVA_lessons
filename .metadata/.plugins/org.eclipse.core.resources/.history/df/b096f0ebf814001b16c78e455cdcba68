@@ -1,0 +1,24 @@
+package jeurole;
+
+
+public class Arc extends Arme {
+	
+	protected int nbFleche;
+
+	public Arc(int nbFleche) {
+		super("Arc", 30);
+		this.nbFleche = nbFleche;
+	}
+	
+	@Override
+	public void attaque(Dragon dragon) {
+		if(nbFleche > 0 ) {
+			super.attaque(dragon);
+			nbFleche --;
+		} else {
+			_livre.ecrire("Malheuresment" + getProprietaire() + "ne possédait plus de flèches");
+		}
+	}
+	
+	_livre.ecrire("fzfzefzefze");
+}

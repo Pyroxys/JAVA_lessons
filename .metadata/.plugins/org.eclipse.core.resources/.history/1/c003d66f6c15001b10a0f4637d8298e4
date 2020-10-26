@@ -1,0 +1,118 @@
+package Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import Version2.Film;
+import Version3.*;
+
+public class TestSituation {
+	
+	public String testSituation(String nomClient, String nomFilm, int typeFilm, int nbJours ) {
+		Client unClient = new Client(nomClient);
+		Film unFilm = new Film(nomFilm, typeFilm);
+		Location uneLocation = new Location(unFilm, nbJours);
+		unClient.addLocation(uneLocation);
+		return unClient.situation();
+	}
+	
+	public void testSituationCumul(Client unClient, String nomFilm, int typeFilm, int nbJours) {
+		Film unFilm = new Film(nomFilm, typeFilm);
+		Location uneLocation = new Location(unFilm, nbJours);
+		unClient.addLocation(uneLocation);
+	}
+
+	@Test
+	public void testLocationNormalLessThan3Days() {
+		String attendu  = "Situation du client: un client\n"
+				+ "\tTaxi Driver\t2.0\n"
+				+ "Total du 2.0\n"
+				+ "Vous gagnez 1 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","Taxi Driver",Film.NORMAL,2));
+	}
+
+	@Test
+	public void testLocationNormal3DaysOrMore() {
+		String attendu  = "Situation du client: un client\n"
+				+ "\tTaxi Driver\t3.5\n"
+				+ "Total du 3.5\n"
+				+ "Vous gagnez 1 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","Taxi Driver",Film.NORMAL,3));
+	}
+	
+	@Test
+	public void testLocationNouveauteLessThan2Days() {
+		String attendu  = "Situation du client: un client\n"
+				+ "\t11 heures 14\t3.0\n"
+				+ "Total du 3.0\n"
+				+ "Vous gagnez 1 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","11 heures 14",Film.NOUVEAUTE,1));
+	}
+	
+	@Test
+	public void testLocationNouveaute2DaysOrMore() {
+		String attendu  = "Situation du client: un client\n"
+				+ "\t11 heures 14\t12.0\n"
+				+ "Total du 12.0\n"
+				+ "Vous gagnez 2 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","11 heures 14",Film.NOUVEAUTE,4));
+	}
+	
+	@Test
+	public void testLocationEnfantLessThan4Days() {
+		String attendu  = "Situation du client: un client\n"
+				+ "\tCendrillon\t1.5\n"
+				+ "Total du 1.5\n"
+				+ "Vous gagnez 1 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","Cendrillon",Film.ENFANT,3));
+	}
+	
+	@Test
+	public void testLocationEnfant4DaysOrMore() {
+		String attendu  = "Situation du client: un client\n"
+				+ "\tCendrillon\t3.0\n"
+				+ "Total du 3.0\n"
+				+ "Vous gagnez 1 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","Cendrillon",Film.ENFANT,4));
+	}
+	
+	@Test
+	public void locationCoffretSeriesTv() {
+		String attendu  = "Situation du client: un client<br>"
+				+ "<p>Texas Walker Ranger</p>0.5<br>"
+				+ "Total du 0.5<br>"
+				+ "Vous gagnez 0 points de fidelite<br>";
+		assertEquals(attendu, testSituation("un client","Texas Walker Ranger",Film.COFFRET_SERIES_TV,1));
+	}
+	
+	@Test
+	public void locationCinephileFor1Day() {
+		String attendu  = "Situation du client: un client\n"
+				+ "<p>blabla</p>2.0<br>"
+				+ "Total du 2.0<br>"
+				+ "Vous gagnez 3 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","blabla",Film.CINEPHILE,1));
+	}
+	
+	@Test
+	public void locationCinephileForMoreThan1Day() {
+		String attendu  = "Situation du client: un client\n"
+				+ "\t blabla</p>6.0 \t"
+				+ "Total du 6.0\n"
+				+ "Vous gagnez 0 points de fidelite\n";
+		assertEquals(attendu, testSituation("un client","blabla",Film.CINEPHILE,2));
+	}
+	
+	@Test
+	public void testCumul() {
+
+		Client unClient = new Client("client cumul");
+		testSituationCumul(unClient, "Taxi Driver", Film.NORMAL, 2);
+		testSituationCumul(unClient, "11 heures 14", Film.NOUVEAUTE, 1);
+		testSituationCumul(unClient, "Cendrillon", Film.ENFANT, 2);
+
+		assertEquals("Situation du client: client cumul\n" + "\tTaxi Driver\t2.0\n" + "\t11 heures 14\t3.0\n"
+				+ "\tCendrillon\t1.5\n" + "Total du 6.5\n" + "Vous gagnez 3 points de fidelite\n", unClient.situation());
+	}
+}

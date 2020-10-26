@@ -1,0 +1,27 @@
+package Version1;
+public class Location {
+	Film unFilm;
+	private int nbJours;
+	
+	public Location(Film unFilm, int nbJours) {
+		this.unFilm = unFilm;
+		this.nbJours = nbJours;
+	}
+
+	public int getNbJours() {
+		return this.nbJours;
+	}
+
+	public Film getFilm() {
+		return this.unFilm;
+	}
+
+	int getPointsFidelite(int pointsFidelite) {
+		pointsFidelite++;
+		// ajout d'un bonus pour les nouveautes louees depuis au moins deux jours
+		if ((getFilm().getCodePrix() == Film.NOUVEAUTE) && getNbJours() > 1) 
+			pointsFidelite++;
+		return pointsFidelite;
+	}
+	
+}
